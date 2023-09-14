@@ -1,11 +1,11 @@
 # Backlog do projeto XXX
-Atualizado em DD/MM/AAAA
+Atualizado em 14/09/2023
 
 ## Tarefas terminadas
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
-| 1. Alimentar as galinhas      | Dunga  ✔️     |
+| 1. Configuração do ambiente de desenvolvimento      | Victor  ✔️     |
 | 2. Espanar os móveis   | Atchim ✔️       |
 | 3. Cortar lenha   | Zangado ✔️       |
 | 4. Pagar as contas   | Mestre ✔️       |
