@@ -5,7 +5,7 @@ Atualizado em 14/09/2023
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
-| 1. Configuração do ambiente de desenvolvimento      | Victor  ✔️     |
+| 1. Configuração do ambiente de desenvolvimento      | Victor Friche  ✔️     |
 | 2. Espanar os móveis   | Atchim ✔️       |
 | 3. Cortar lenha   | Zangado ✔️       |
 | 4. Pagar as contas   | Mestre ✔️       |
@@ -18,6 +18,6 @@ Atualizado em 14/09/2023
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
-| 1. Catar frutas no bosque      | Soneca ➕➖     |
-| 2. Arrumar as camas   | Soneca  ❌    |
-| 3. Consertar a cerca | Zangado  ➕➖ | 
+| 1. Classe Equipamento      | Victor Friche |
+| 2. Classe Cliente  | Saulo |
+| 3. Classe Aluguel | Diogo | 
