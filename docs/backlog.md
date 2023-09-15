@@ -19,4 +19,13 @@ Atualizado em 14/09/2023
 | Tarefa      | Responsável |
 | ----------- | ----------- |
 | 1. Classe Cliente  | Saulo |
-| 2. Classe Aluguel | Diogo | 
+| 2. Classe Aluguel | Vitor | 
+| 3. Metodo registrar aluguel na classe empresa | Saulo |
+| 4. Metodo de valor total aluguel na classe empresa | Victor Friche |
+| 5. Metodo de alugueis passados de cliente especifico  incluindo informações sobre o cliente, o equipamento e as
+datas de início e término na classe empresa | Vitor |
+| 6. Metodo de alugueis passados e atuais de cliente especifico na classe empresa | Vitor |
+| 7. Relatorio mensal na classe empresa | Victor Friche  |
+| 8. Classe Aplicacao/Menu | Victor Friche | 
+| 9. Diagrama de Classes UML | Diogo | 
+| 10. Documentacao de codigo | Diogo | 
