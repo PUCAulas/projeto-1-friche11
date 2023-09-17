@@ -1,11 +1,11 @@
 package business;
-import java.time.LocalTime;
+import java.time.LocalDate;
 
 public class Aluguel {
 	private Cliente cliente;
 	private Equipamento equipamento;
-	private LocalTime inicio;
-	private LocalTime termino;
+	private LocalDate inicio;
+	private LocalDate termino;
 	private int valor;
 
 	public Cliente getCliente() {
@@ -20,16 +20,16 @@ public class Aluguel {
 	public void setEquipamento(Equipamento equipamento) {
 		this.equipamento = equipamento;
 	}
-	public LocalTime getInicio() {
+	public LocalDate getInicio() {
 		return inicio;
 	}
-	public void setInicio(LocalTime inicio) {
+	public void setInicio(LocalDate inicio) {
 		this.inicio = inicio;
 	}
-	public LocalTime getTermino() {
+	public LocalDate getTermino() {
 		return termino;
 	}
-	public void setTermino(LocalTime termino) {
+	public void setTermino(LocalDate termino) {
 		this.termino = termino;
 	}
 	public int getValor() {
@@ -39,7 +39,7 @@ public class Aluguel {
 		this.valor = valor;
 	}
 
-	public Aluguel(Cliente cliente, Equipamento equipamento, LocalTime inicio, LocalTime termino) {
+	public Aluguel(Cliente cliente, Equipamento equipamento, LocalDate inicio, LocalDate termino) {
 		this.cliente = cliente;
 		this.equipamento = equipamento;
 		this.inicio = inicio;
