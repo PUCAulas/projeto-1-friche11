@@ -37,5 +37,20 @@ class EmpresaTest {
 
         assertEquals(1000.0, valorTotal, 0.01);
     }
+    
+    @Test
+    public void testGerarRelatorioMensal() {
+        LocalDate dataInicio1 = LocalDate.of(2023, 9, 1);
+        LocalDate dataFim1 = LocalDate.of(2023, 9, 10);
+        LocalDate dataInicio2 = LocalDate.of(2023, 9, 5);
+        LocalDate dataFim2 = LocalDate.of(2023, 9, 15);
+
+        empresa.registrarAluguel(cliente1, equipamento1, dataInicio1, dataFim1);
+        empresa.registrarAluguel(cliente1, equipamento2, dataInicio2, dataFim2);
+
+        double faturamento = empresa.gerarRelatorioMensal(LocalDate.of(2023, 9, 1));
+
+        assertEquals(1750.0, faturamento, 0.01);
+    }
 
 }
