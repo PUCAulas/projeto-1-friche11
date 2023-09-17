@@ -52,5 +52,20 @@ class EmpresaTest {
 
         assertEquals(1750.0, faturamento, 0.01);
     }
+    
+    @Test
+    public void testRegistrarEquipamento() {
+        // Registrar equipamento1
+        empresa.registrarEquipamento(equipamento1);
+
+        // Verificar se equipamento1 está registrado
+        assertTrue(empresa.getCodigosEquipamentos().contains(1));
+
+        // Registrar equipamento2
+        empresa.registrarEquipamento(equipamento2);
+
+        // Verificar se equipamento2 está registrado
+        assertTrue(empresa.getCodigosEquipamentos().contains(2));
+    }
 
 }

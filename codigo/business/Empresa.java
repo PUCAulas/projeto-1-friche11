@@ -54,4 +54,15 @@ public class Empresa {
 		
 	}
 
+	public void registrarEquipamento(Equipamento equipamento1) {
+		
+		
+	}
+
+	public Set<Integer> getCodigosEquipamentos() {
+        return codigosEquipamentos;
+    }
+	
+	
+
 }
