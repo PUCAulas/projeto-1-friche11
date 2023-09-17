@@ -35,7 +35,5 @@ class AluguelTest {
 		assertEquals(i.getDayOfMonth(), 17);
 		assertEquals(i.getMonthValue(), 9);
 		assertEquals(i.getYear(), 2023);
-		
 	}
-
 }
