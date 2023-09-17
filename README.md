@@ -10,6 +10,7 @@ escavadeiras, betoneiras, andaimes, etc.
 * Diogo Chaves Torres
 * Saulo Pereira Vasconcelos
 * Victor de Souza Friche Passos
+* Vitor de Figueiredo Pereira
 
 ## Professor responsável 
 
