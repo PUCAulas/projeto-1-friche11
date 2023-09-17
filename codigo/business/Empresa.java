@@ -54,9 +54,12 @@ public class Empresa {
 		
 	}
 
-	public void registrarEquipamento(Equipamento equipamento1) {
-		
-		
+	public void registrarEquipamento(Equipamento equipamento) {
+	    int codigo = equipamento.getCodigo();
+	    if (codigosEquipamentos.contains(codigo)) {
+	        System.out.println("O código do equipamento já está em uso.");
+	    }
+	    codigosEquipamentos.add(codigo);
 	}
 
 	public Set<Integer> getCodigosEquipamentos() {
