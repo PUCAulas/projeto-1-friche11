@@ -5,11 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import app.Cliente;
+import business.Cliente;
+
+
 
 class ClienteTest {
 
-	   private Cliente cliente;
+	 private Cliente cliente;
 
 	    @BeforeEach
 	    public void setUp() {
@@ -39,5 +41,7 @@ class ClienteTest {
 	        assertEquals("Maria Souza", cliente.getNome());
 	        assertEquals("987.654.321-00", cliente.getCpf());
 	    }
+
+
 	
 }
