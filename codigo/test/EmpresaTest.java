@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import business.Aluguel;
@@ -18,7 +19,7 @@ class EmpresaTest {
     private Cliente cliente1, cliente2;
     private Equipamento equipamento1, equipamento2;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         empresa = new Empresa();
         cliente1 = new Cliente("Victor", "123456789");
@@ -30,7 +31,7 @@ class EmpresaTest {
     @Test
     public void testCalcularValorTotalAluguel() {
         LocalDate dataInicio = LocalDate.of(2023, 9, 1);
-        LocalDate dataFim = LocalDate.of(2023, 9, 10);
+        LocalDate dataFim = LocalDate.of(2023, 9, 11);
         Aluguel aluguel = new Aluguel(cliente1, equipamento1, dataInicio, dataFim);
 
         double valorTotal = empresa.calcularValorTotalAluguel(aluguel);
