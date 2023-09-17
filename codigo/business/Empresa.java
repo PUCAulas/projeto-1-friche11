@@ -75,6 +75,28 @@ public class Empresa {
         return codigosEquipamentos;
     }
 	
-	
+	public List<String> getAlugueisClienteDetalhados(Cliente cliente) {
+        List<String> alugueisDetalhados = new ArrayList<>();
 
+        for (Aluguel aluguel : alugueisAtuais) {
+            if (aluguel.getCliente().equals(cliente)) {
+                String detalhesAluguel = "Cliente: " + aluguel.getCliente().getNome() +
+                ", Equipamento: " + aluguel.getEquipamento().getDescricao() +
+                ", Data de Início: " + aluguel.getInicio() +
+                ", Data de Término: " + aluguel.getTermino();
+                alugueisDetalhados.add(detalhesAluguel);
+            }
+        }
+
+        for (Aluguel aluguel : alugueisPassados) {
+            if (aluguel.getCliente().equals(cliente)) {
+                String detalhesAluguel = "Cliente: " + aluguel.getCliente().getNome() +
+                ", Equipamento: " + aluguel.getEquipamento().getDescricao() +
+                ", Data de Início: " + aluguel.getInicio() +
+                ", Data de Término: " + aluguel.getTermino();
+                alugueisDetalhados.add(detalhesAluguel);
+            }
+        }
+		return alugueisDetalhados;
+    }
 }
