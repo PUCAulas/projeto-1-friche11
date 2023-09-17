@@ -18,6 +18,15 @@ public class Empresa {
 	     this.codigosEquipamentos = new HashSet<>();
 	    }
 	 
-	 
+	 public double calcularValorTotalAluguel(Aluguel aluguel) {
+	     long diasAlugados = aluguel.getInicio().until(aluguel.getTermino()).getDays();
+	     return diasAlugados * aluguel.getEquipamento().getValorDiario();
+	    }
+
+	public void registrarAluguel(Cliente cliente1, Equipamento equipamento1, LocalDate dataInicio1,
+			LocalDate dataFim1) {
+		
+		
+	}
 
 }
