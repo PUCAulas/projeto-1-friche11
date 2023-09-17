@@ -48,11 +48,20 @@ public class Empresa {
 		    return faturamentoTotal;
 		}
 
-	public void registrarAluguel(Cliente cliente1, Equipamento equipamento1, LocalDate dataInicio1,
-			LocalDate dataFim1) {
-		
-		
-	}
+	 public void registrarAluguel(Cliente cliente, Equipamento equipamento, LocalDate dataInicio, LocalDate dataFim) {
+	        if (!codigosEquipamentos.contains(equipamento.getCodigo())) {
+	            throw new IllegalArgumentException("Equipamento não registrado: " + equipamento.getCodigo());
+	        }
+
+	        Aluguel aluguel = new Aluguel(cliente, equipamento, dataInicio, dataFim);
+	        alugueisAtuais.add(aluguel);
+
+	        LocalDate hoje = LocalDate.now();
+	        if (dataFim.isBefore(hoje)) {
+	            alugueisPassados.add(aluguel);
+	            alugueisAtuais.remove(aluguel);
+	        }
+	    }
 
 	public void registrarEquipamento(Equipamento equipamento) {
 	    int codigo = equipamento.getCodigo();
