@@ -25,3 +25,4 @@ datas de início e término na classe empresa   | Vitor  ✔️      |
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
+| ----------- | ----------- |
