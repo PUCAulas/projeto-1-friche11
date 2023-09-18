@@ -11,11 +11,15 @@ public class Empresa {
 	 private List<Aluguel> alugueisAtuais;
 	 private List<Aluguel> alugueisPassados;
 	 private Set<Integer> codigosEquipamentos;
+	 private List<Cliente> clientes;
+	 private List<Equipamento> equipamentos;
 	 
 	 public Empresa() {
-		 this.alugueisAtuais = new ArrayList<>();
+		this.alugueisAtuais = new ArrayList<>();
 	     this.alugueisPassados = new ArrayList<>();
 	     this.codigosEquipamentos = new HashSet<>();
+		this.clientes = new ArrayList<>();
+	     this.equipamentos = new ArrayList<>();
 	    }
 	 
 	 public double calcularValorTotalAluguel(Aluguel aluguel) {
@@ -77,6 +81,7 @@ public class Empresa {
 	        System.out.println("O código do equipamento já está em uso.");
 	    }
 	    codigosEquipamentos.add(codigo);
+	equipamentos.add(equipamento); // Adicionar o equipamento à lista
 	}
 
 	public Set<Integer> getCodigosEquipamentos() {
@@ -107,4 +112,27 @@ public class Empresa {
         }
 		return alugueisDetalhados;
     }
+
+	 public void registrarCliente(Cliente novoCliente) {
+	        clientes.add(novoCliente);
+	    }
+
+	public Cliente getClientePeloNome(String nomeCliente) {
+	    for (Cliente cliente : clientes) {
+	        if (cliente.getNome().equalsIgnoreCase(nomeCliente)) {
+	            return cliente;
+	        }
+	    }
+	    return null; // Retorna null se o cliente não for encontrado
+	}
+
+	public Equipamento getEquipamentoPeloCodigo(int codigoEquipamento) {
+	    for (Equipamento equipamento : equipamentos) {
+	        if (equipamento.getCodigo() == codigoEquipamento) {
+	            return equipamento;
+	        }
+	    }
+	    return null; // Retorna null se o equipamento não for encontrado
+	}
+
 }
