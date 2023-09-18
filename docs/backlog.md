@@ -7,25 +7,21 @@ Atualizado em 14/09/2023
 | ----------- | ----------- |
 | 1. Configuração do ambiente de desenvolvimento      | Victor Friche  ✔️     |
 | 2. Classe Equipamento   | Victor Friche ✔️       |
-| 3. Cortar lenha   | Zangado ✔️       |
-| 4. Pagar as contas   | Mestre ✔️       |
-| 5. Planejamento da semana que vem   | Mestre ✔️       |
-| 6. Organizar o jantar   | Feliz ✔️       |
-| 7. Aguar as plantas   | Dengoso  ✔️      |
+| 3. Classe Cliente   | Saulo ✔️       |
+| 4. Classe Aluguel   | Vitor ✔️       |
+| 5. Metodo registrar aluguel na classe empresa   | Saulo ✔️       |
+| 6. Metodo de valor total aluguel na classe empresa   | Victor Friche ✔️       |
+| 7. Metodo de alugueis passados de cliente especifico  incluindo informações sobre o cliente, o equipamento e as
+datas de início e término na classe empresa   | Vitor  ✔️      |
+| 8. Metodo de alugueis passados e atuais de cliente especifico na classe empresa   | Vitor ✔️       |
+| 9. Relatorio mensal na classe empresa   | Victor Friche ✔️       |
+| 10. Classe Aplicacao/Menu   | Victor Friche ✔️       |
+| 11. Diagrama de Classes UML   | Diogo ✔️       |
+| 12. Documentacao de codigo   | Diogo ✔️       |
+| 13. Documentação no git   | Diogo ✔️       |
 ----
 
 ## Tarefas pendentes (em ordem de prioridade)
 
 | Tarefa      | Responsável |
 | ----------- | ----------- |
-| 1. Classe Cliente  | Saulo |
-| 2. Classe Aluguel | Vitor | 
-| 3. Metodo registrar aluguel na classe empresa | Saulo |
-| 4. Metodo de valor total aluguel na classe empresa | Victor Friche |
-| 5. Metodo de alugueis passados de cliente especifico  incluindo informações sobre o cliente, o equipamento e as
-datas de início e término na classe empresa | Vitor |
-| 6. Metodo de alugueis passados e atuais de cliente especifico na classe empresa | Vitor |
-| 7. Relatorio mensal na classe empresa | Victor Friche  |
-| 8. Classe Aplicacao/Menu | Victor Friche | 
-| 9. Diagrama de Classes UML | Diogo | 
-| 10. Documentacao de codigo | Diogo | 
