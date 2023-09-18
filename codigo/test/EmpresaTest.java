@@ -6,8 +6,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +18,7 @@ class EmpresaTest {
 	
 	Aluguel aluguel;
 	private Empresa empresa;
-    private Cliente cliente1, cliente2;
+    private Cliente cliente1;
     private Equipamento equipamento1, equipamento2;
     List<String> alugueisDetalhados;
     LocalDate dataInicio;
@@ -30,7 +28,6 @@ class EmpresaTest {
     public void setUp() {
         empresa = new Empresa();
         cliente1 = new Cliente("Victor", "123456789");
-        cliente2 = new Cliente("Saulo", "987654321");
         equipamento1 = new Equipamento(1, "Escavadeira", 100.0);
         equipamento2 = new Equipamento(2, "Furadeira", 50.0);
     }
@@ -49,22 +46,21 @@ class EmpresaTest {
     @Test
     public void testGerarRelatorioMensal() {
         LocalDate dataInicio1 = LocalDate.of(2023, 9, 1);
-        LocalDate dataFim1 = LocalDate.of(2023, 9, 10);
+        LocalDate dataFim1 = LocalDate.of(2023, 9, 11);
         LocalDate dataInicio2 = LocalDate.of(2023, 9, 5);
         LocalDate dataFim2 = LocalDate.of(2023, 9, 15);
         empresa.registrarEquipamento(equipamento1);
         empresa.registrarEquipamento(equipamento2);
         try{
-        empresa.registrarAluguel(cliente1, equipamento1, dataInicio1, dataFim1);
-        empresa.registrarAluguel(cliente1, equipamento2, dataInicio2, dataFim2);
+	        empresa.registrarAluguel(cliente1, equipamento1, dataInicio1, dataFim1);
+	        empresa.registrarAluguel(cliente1, equipamento2, dataInicio2, dataFim2);
         }
         catch(Exception e){
         	System.out.println(e);
         }
-
         double faturamento = empresa.gerarRelatorioMensal(LocalDate.of(2023, 9, 1));
 
-        assertEquals(1750.0, faturamento, 0.01);
+        assertEquals(1500, faturamento, 0.01);
     }
     
     @Test
@@ -90,7 +86,6 @@ class EmpresaTest {
     	dataInicio = LocalDate.now();
         dataFim = LocalDate.now();
     	empresa.registrarEquipamento(equipamento1);
-    	System.out.println("Funciona");
     	try {
       		empresa.registrarAluguel(cliente1, equipamento1, dataInicio, dataFim);
       	}
@@ -98,9 +93,8 @@ class EmpresaTest {
       		System.out.println(e);
       	}
         alugueisDetalhados = empresa.getAlugueisClienteDetalhados(cliente1);
-        for (String detalhesAluguel : alugueisDetalhados) {
-            System.out.println(detalhesAluguel);
-        }
+        String detalhesAluguel = alugueisDetalhados.get(0);
+        assertEquals(detalhesAluguel,"Cliente: V, Equipamento: Descrição, Data de Início: 2023-09-17, Data de Término: 2023-09-17");
     }
 
 }

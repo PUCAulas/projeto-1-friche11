@@ -26,24 +26,32 @@ public class Empresa {
 	 public double gerarRelatorioMensal(LocalDate data) {
 		    double faturamentoTotal = 0.0;
 		    int mesDesejado = data.getMonthValue();
+	        List<String> alugueisDetalhados = new ArrayList<>();
 
-		    // Verificar aluguéis atuais
-		    for (int i = 0; i < alugueisAtuais.size(); i++) {
-		        Aluguel aluguel = alugueisAtuais.get(i);
-		        LocalDate dataAluguel = aluguel.getInicio();
-		        if (dataAluguel.getMonthValue() == mesDesejado) {
+	        
+	        // Verificar aluguéis atuais
+	        for (Aluguel aluguel : alugueisAtuais) {
+	        	if (aluguel.getTermino().getMonthValue() == mesDesejado) {
+	        		String detalhesAluguel = "Cliente: " + aluguel.getCliente().getNome() +
+	                        ", Equipamento: " + aluguel.getEquipamento().getDescricao() +
+	                        ", Data de Início: " + aluguel.getInicio() +
+	                        ", Data de Término: " + aluguel.getTermino();
+	        		alugueisDetalhados.add(detalhesAluguel);
 		            faturamentoTotal += calcularValorTotalAluguel(aluguel);
 		        }
-		    }
-
-		    // Verificar aluguéis passados
-		    for (int i = 0; i < alugueisPassados.size(); i++) {
-		        Aluguel aluguel = alugueisPassados.get(i);
-		        LocalDate dataAluguel = aluguel.getInicio();
-		        if (dataAluguel.getMonthValue() == mesDesejado) {
+	        }
+	        
+	        // Verificar aluguéis passados
+	        for (Aluguel aluguel : alugueisPassados) {
+	        	if (aluguel.getTermino().getMonthValue() == mesDesejado) {
+	        		String detalhesAluguel = "Cliente: " + aluguel.getCliente().getNome() +
+	                        ", Equipamento: " + aluguel.getEquipamento().getDescricao() +
+	                        ", Data de Início: " + aluguel.getInicio() +
+	                        ", Data de Término: " + aluguel.getTermino();
+	        		alugueisDetalhados.add(detalhesAluguel);
 		            faturamentoTotal += calcularValorTotalAluguel(aluguel);
 		        }
-		    }
+	        }
 
 		    return faturamentoTotal;
 		}
