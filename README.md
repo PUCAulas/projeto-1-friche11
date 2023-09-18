@@ -14,5 +14,5 @@ escavadeiras, betoneiras, andaimes, etc.
 
 ## Professor responsável 
 
-* Doutor Johnatan Alves de Oliveira
+* Johnatan Alves de Oliveira
 
